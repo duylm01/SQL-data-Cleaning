@@ -51,6 +51,16 @@ SET full_name = UPPER(full_name);
 |FEY KLOSS|52|married|fkloss9@godaddy.com|808-177-0318|8976 Jackson Park,Honolulu,Hawaii|Chemical Engineer|11/5/2014|
 
 ## MODIFY age COLUMN
+```sql
+SELECT age
+FROM club_member_info
+WHERE age > 100 
+
+SELECT SUBSTR(age,2) #loại bỏ số đầu tiên của tuổi chỉ lấy bắt đầu từ số thứ 2
+FROM club_member_info
+WHERE age>100;
+
+```
 
 
 
