@@ -60,6 +60,10 @@ SELECT SUBSTR(age,2) #loại bỏ số đầu tiên của tuổi chỉ lấy b�
 FROM club_member_info
 WHERE age>100;
 
+UPDATE club_member_info
+SET age = SUBSTR(age,2)
+WHERE age>100;
+
 ```
 
 
