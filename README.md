@@ -87,6 +87,34 @@ WHERE age IS NULL OR age ='';
 |full_name|age|martial_status|email|phone|full_address|job_title|membership_date|
 |---------|---|--------------|-----|-----|------------|---------|---------------|
 
+## MODIFY martial_status COLUMN
+```sql
+# Count martial_status
+
+SELECT martial_status, COUNT(*)  AS count
+FROM club_member_info
+GROUP BY martial_status;
+
+# We can see the martial_status almost is 'divorced'
+# So I will fill the NULL value = divorced
+
+UPDATE club_member_info
+SET martial_status = 'divorced'
+WHERE martial_status IS NULL OR martial_status = '';
+
+# Final check
+
+SELECT martial_status
+FROM club_member_info
+WHERE martial_status IS NULL OR martial_status = '';
+
+```
+### Result 
+
+|martial_status|
+|--------------|
+
+
 
 
 
