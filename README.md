@@ -64,7 +64,30 @@ UPDATE club_member_info
 SET age = SUBSTR(age,2)
 WHERE age>100;
 
+SELECT *
+FROM club_member_info
+WHERE age IS NULL OR age ='';
+
+SELECT ROUND(AVG(age))
+FROM club_member_info;
+
+UPDATE club_member_info
+SET age = 42
+WHERE age IS NULL OR age = '';
+
+# FINAL CHECK
+SELECT *
+FROM club_member_info
+WHERE age IS NULL OR age ='';
+
 ```
+
+### RESULT
+
+|full_name|age|martial_status|email|phone|full_address|job_title|membership_date|
+|---------|---|--------------|-----|-----|------------|---------|---------------|
+
+
 
 
 
